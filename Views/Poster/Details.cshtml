@@ -1,0 +1,16 @@
+﻿
+@model Poster
+
+<h2>@Model.Name</h2>    
+<div class="col-sm-5 col-lg-5 col-md-5">
+    <div class="thumbnail">
+        <img alt="@Model.Name" src="@Url.Content(Model.ImageUrl)" />
+        <div class="caption-full">
+            <h3 class="pull-right">@Model.Price.ToString("c")</h3>
+            <h3>
+                @Model.Name
+            </h3>
+            <p>@Model.LongDescription</p>
+        </div>
+    </div>
+</div>

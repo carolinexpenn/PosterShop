@@ -1,0 +1,130 @@
+﻿/*!
+ * Start Bootstrap - Shop Homepage (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+@import url("https://fast.fonts.net/t/1.css?apiType=css&projectid=0e4157c7-2a10-498d-a991-de285934c097");*/
+body {
+    padding-top: 70px; 
+    height: 100%;
+    background-color: #151515;
+    font-family: "DIN Next W01 Regular", Helvetica, Arial, sans-serif; 
+}
+
+html, body {
+    background: url(../Images/pattern.png) no-repeat center center fixed;
+    background-size: cover; 
+}
+
+h1, h2, h3, h4, h5, h6, input, textarea, select {
+    font-family: "DIN Next W01 Regular", Helvetica, Arial, sans-serif;
+    color: #aaa;
+    font-weight: 600;
+}
+h1 {
+    margin-top: 50px;
+}
+h2 {
+    margin-top: 50px;
+}
+
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: 130px;
+    overflow: hidden;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail img {
+    width: 75%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 5px;
+    color: #333;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.navbar {
+    background-image: none;
+}
+
+.navbar-inverse {
+    background-color: #303030;
+    border-color: #aaa;
+}
+
+.nav.navbar-nav.navbar-right li a {
+    background-color: #303030;
+    border-color: #aaa;
+}
+
+
+.row {
+    color: #fff;
+}
+
+.navbar .nav > li > a {
+    font-size: 1.2em;
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    color: #aaa;
+    cursor: pointer;
+}
+
+
+.navbar .nav >  li > a {
+    font-size: 1.2em;
+    display: block;
+    position: relative;
+    text-transform: none;
+    color: #ffd800;
+}
+
+.navbar .nav > li > a.active  {
+    color: #fff;
+}
+
+.carousel .item {
+    height: 400px;
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 200px;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+    background-color: #303030;
+    border-color: #aaa;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #aaa;
+    color: #303030;
+}

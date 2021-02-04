@@ -1,0 +1,9 @@
+﻿@model PosterListViewModel
+
+
+<h1>@Model.CurrentCategory</h1>
+
+@foreach (var poster in Model.Posters)
+{
+    <partial name="_PosterCard" model="poster" />
+}

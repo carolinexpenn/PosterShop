@@ -1,0 +1,69 @@
+﻿@model OrdersListViewModel
+
+<h2>Your Orders</h2>
+<h4>Here are the posters you have ordered</h4>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+
+            <th>
+                <a asp-controller="Orders" asp-action="List"
+                   asp-route-orderBy="Category" asp-route-sortOrder="@ViewData["sortOrderCategory"]">Category</a>
+            </th>
+            <th>
+                <a asp-controller="Orders" asp-action="List"
+                   asp-route-orderBy="Name" asp-route-sortOrder="@ViewData["sortOrderName"]">Name</a>
+            </th>
+            <th>
+                Description
+            </th>
+            <th class="text-right">
+                <a asp-controller="Orders" asp-action="List"
+                   asp-route-orderBy="Price" asp-route-sortOrder="@ViewData["sortOrderPrice"]">Price</a>
+            </th>
+            <th>More Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model.PosterOrders)
+        {
+            <tr>
+                <td class="text-center">@p.Category.CategoryName</td>
+                <td class="text-left">@p.Name</td>
+                <td class="text-left">@p.ShortDescription</td>
+                <td class="text-right">@p.Price.ToString("c")</td>
+                <td class="text-center">
+                    <a asp-controller="Poster" asp-action="Details"
+                       asp-route-id="@p.PosterId">See more ...</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right">Total:</td>
+            <td class="text-right">
+                @Model.OrderTotal.ToString("c")
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="List"
+   asp-route-sortOrder="@ViewData["currentSort"]"
+   asp-route-List="@(Model.PageIndex - 1)"
+   class="btn btn-default @prevDisabled">
+    Previous
+</a>
+<a asp-action="List"
+   asp-route-sortOrder="@ViewData["currentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   class="btn btn-default @nextDisabled">
+    Next
+</a>
+

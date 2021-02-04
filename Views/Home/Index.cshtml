@@ -1,0 +1,16 @@
+﻿@model HomeViewModel
+
+
+<partial name="_Carousel" />
+
+<h2>Posters of the week</h2>
+<h4>Our weekly selection - just for you!</h4>
+
+<div class="row">
+
+    @foreach (var poster in Model.PostersOfTheWeek)
+    {
+        <partial name="_PosterCard" model="poster" />
+    }
+
+</div>

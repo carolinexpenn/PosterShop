@@ -1,0 +1,15 @@
+﻿@model Poster
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail">
+            <img src="@Url.Content(@Model.ImageUrl)" alt="@Model.Name">
+            <div class="caption">
+                <h3 class="pull-right">@Model.Price.ToString("c")</h3>
+                <h3>
+                    <a asp-controller="Poster"
+                       asp-action="Details"
+                       asp-route-id="@Model.PosterId">@Model.Name</a>
+                </h3>
+                <p>@Model.ShortDescription</p>
+            </div>
+        </div>
+    </div>
